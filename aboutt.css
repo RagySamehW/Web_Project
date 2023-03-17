@@ -19,3 +19,33 @@
      list-style: none;
     padding :0px 20px;
   }
+.banner-card
+{
+position: relative;
+}
+.banner-card img{
+width: 1350px;
+height: 250px;
+}
+.banner-text h2
+{
+position: absolute;
+top: 50;
+right: 60;
+left: 60;
+font-weight: bold;
+font-size:xx-large;
+color: white ;
+padding: 20;
+text-align: center;
+}
+.banner-text p
+{
+position: absolute;
+top: 140;
+right: 60;
+left: 60;
+font-size:small;
+color: white ;
+text-align: center;
+}
