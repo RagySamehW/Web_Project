@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your cart</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Spartan", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
+
+        h4 {
+            font-size: 20px;
+            color: #222;
+        }
+
+        h6 {
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #465b52;
+            margin: 15px 0 20px 0;
+        }
+
+        .section-p1 {
+            padding: 40px 80px;
+        }
+
+        body {
+            width: 100%;
+            background-color: #000000;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background-color: #000000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+
+        }
+
+        #header .logo {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fffcfc;
+            font-family: Serif;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navbar li {
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fffcfc;
+            transition: 0.3s ease;
+        }
+
+        #navbar li a.shop {
+            color: #eb9e10;
+        }
+
+        #navbar li a:hover,
+        #navbar li a.active {
+            color: #eb9e10;
+        }
+
+        #navbar li a.active::after,
+        #navbar li a:hover::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background-color: #eb9e10;
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }
+    </style>
+</head>
+    <body>
+        <section>
+            <section id="header">
+                <a class="logo" href="#">LionSoul</a>
+    
+                <div>
+                    <ul id="navbar">
+                        <li><a href="pro.html">Home</a></li>
+                        <li><a class="shop" href="products.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html"><i class="material-icons">shop</i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section>
+           
+            
+
+            
+        </section>
+    </body>
+    </html>
