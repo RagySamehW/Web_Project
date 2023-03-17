@@ -1,5 +1,18 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="Style.css" />
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <head>
     <title>Document</title>
     <style>
@@ -113,14 +126,29 @@
             bottom: -4px;
             left: 20px;
         }
+        .small-img-group{
+            display: flex;
+            justify-content: space-between;
+        }
+        .small-img-col{
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+        .r{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            padding-top: 20px;
+        }
+        .row{
+            margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <section>
         <section id="header">
             <a class="logo" href="#">LionSoul</a>
-
             <div>
                 <ul id="navbar">
                     <li><a href="pro.html">Home</a></li>
@@ -132,6 +160,27 @@
                 </ul>
             </div>
         </section>
-    </section>
+        <section class="container sproduct my-5 pt-5">
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-12 col-12 pb-1">
+                    <img class="r img-fluid w-100" src="products/pp5.webp">
+                    <div class="small-img-group">
+                        <div class="small-img-col">
+                            <img class="small-img" src="products/pp2.webp" width="100%" >
+                        </div>
+                        <div class="small-img-col">
+                            <img class="small-img" src="products/pp1.webp" width="100%" >
+                        </div>
+                        <div class="small-img-col">
+                            <img class="small-img" src="products/pp4.webp" width="100%" >
+                        </div>
+                        <div class="small-img-col">
+                            <img class="small-img" src="products/pp3.webp" width="100%" >
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
 </body>
 </html>
