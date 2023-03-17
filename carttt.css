@@ -1,6 +1,20 @@
-#cart-container table{
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
+table{
+        border-collapse: separate;
+        width: 100%;
+        table-layout: fixed;
+        border: 2px solid black;
 }
+th{
+    font-weight: 700;
+    background: #fd8c66;
+    color: #fff;
+    border: none;
+    padding: 6px 0;
+}
+td
+{
+    text-align: center;
+}
+
+
 
