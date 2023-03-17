@@ -49,3 +49,20 @@ font-size:small;
 color: white ;
 text-align: center;
 }
+.a-6 h3
+{
+    display: flex;
+ align-items: center;
+}
+.a-6
+{
+   
+    align-items: center;
+    display: flex;
+}
+.a-6 img
+{
+   width: 50%;
+   height: auto;
+    
+}
