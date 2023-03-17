@@ -1,0 +1,21 @@
+ #header
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
+        padding: 20px 80px;
+        background: #E3E6F3;
+        padding-left: 0px;
+    }
+  #navbar
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:800px;
+  }
+  #navbar li
+  {
+     list-style: none;
+    padding :0px 20px;
+  }
