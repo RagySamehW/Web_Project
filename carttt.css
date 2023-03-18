@@ -53,6 +53,15 @@ td
     text-align: right;
     padding: 10px;
 }
+tr:hover
+{
+    background-color:darkgrey;
+}
+.trash
+{
+    width: 40;
+    height: 25px; 
+}
 
 
 
