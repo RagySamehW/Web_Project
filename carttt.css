@@ -28,13 +28,29 @@ td
     margin-left: 37px;
     float: left
 }
+.code
+{
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    background-color: white;
+}
+.code:hover
+{
+    background-color:black;
+    color: white;
+}
 }
 .buttonss
 {
     text-align: center;
     padding: 15px;
     margin: 5px;
-    background-color: #fd8c66;
+    background-color: white;
+}
+.buttonss:hover {
+    background-color:#fd8c66;
+    color: white;
 }
 .table3
 {
