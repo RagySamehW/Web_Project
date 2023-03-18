@@ -289,7 +289,31 @@
             font-weight: 600
         }
     }
+
+    .h_container {
+        background-color: #cac7c7;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 45px;
+        margin-top: 10px;
+        margin-right: 5px;
+
+    }
+
+    #heart {
+        font-size: 25px;
+    }
+
+    #heart:hover {
+        color: red;
+    }
 </style>
+<script src="https://kit.fontawesome.com/3929e16ef5.js" crossorigin="anonymous"></script>
+<script src="{% static 'network/functions.js' %}"></script>
 </head>
 
 <body>
@@ -337,6 +361,9 @@
                         <option>XL</option>
                     </select>
                     <input type="number" value="1">
+                    <div class="h_container">
+                        <i id="heart" class="far fa-heart"></i>
+                    </div>
                     <button class="buy-button">Add To Cart</button>
                     <h4 class="q">Product Details</h4>
                     <span>This product is made with at least 50% sustainable materials, using a blend of both recycled
@@ -349,7 +376,8 @@
             </section>
         </div>
     </section>
-    <section>
+    <section Class=""></section>
+    <section class="foot">
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
