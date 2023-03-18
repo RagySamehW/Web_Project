@@ -1,8 +1,10 @@
 table{
         border-collapse: collapse;
-        width: 100%;
+        width: 95%;
         table-layout: fixed;
         border: 2px solid black;
+        margin-left: auto;
+        margin-right: auto;
 }
 th{
     font-weight: 700;
@@ -38,7 +40,8 @@ td
 {
     width: 50%;
     float: right;
-    margin-right: 370px;
+    margin-right: 37px;
+    margin-bottom: 10px;
 }
 .header
 {
