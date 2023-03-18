@@ -1,5 +1,5 @@
 table{
-        border-collapse: separate;
+        border-collapse: collapse;
         width: 100%;
         table-layout: fixed;
         border: 2px solid black;
@@ -14,6 +14,22 @@ th{
 td
 {
     text-align: center;
+}
+.coupon
+{
+    text-align: left;
+    padding: 10px;
+}
+.table2
+{
+    width: 50%;
+    margin: 5px;
+}
+.coupon2
+{
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
 }
 
 
