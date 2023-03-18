@@ -313,9 +313,87 @@
         color: red;
     }
 
-    h4.q{
-        margin-top: 100px ;
+    h4.q {
+        margin-top: 100px;
         margin-bottom: 50px;
+    }
+
+    #product1 {
+        text-align: center;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    #product1 .pro {
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid #eb9e10;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px #eb9e10;
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+        background-color: #000;
+    }
+
+    #product1 .pro:hover {
+        box-shadow: 20px 20px 30px #eb9e10;
+    }
+
+    #product1 .pro img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #product1 .pro .des {
+        text-align: start;
+        padding: 10px 0;
+    }
+
+    #product1 .pro .des span {
+        color: #635d5d;
+        font-size: 10px;
+    }
+
+    #product1 .pro .des h5 {
+        padding-top: 7px;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    #product1 .pro .des i {
+        font-size: 10px;
+        color: #eb9e10;
+    }
+
+    #product1 .pro .des h4 {
+        padding-top: 7px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #fcfcfc;
+    }
+
+    #product1 .pro .cart {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+        font-weight: 500;
+        background-color: #000000;
+        color: #eb9e10;
+        border: 1px solid #eb9e10;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    #product1 .pro-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 20px;
     }
 </style>
 </head>
@@ -381,8 +459,67 @@
         </div>
     </section>
     <hr>
-    <section Class="">
-
+    <section id="product1" class="section-p1">
+        <hr>
+        <h2>Best Summer Collection</h2>
+        <div class="pro-container">
+            <div onclick="" class="pro">
+                <a href="item.html">
+                    <img class="p1" src="products/product1.jpg" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
+                    </div>
+                    <a href="#"><i class="material-icons cart">shop</i></a>
+                </a>
+            </div>
+            <div class="pro-container">
+                <div onclick="" class="pro">
+                    <a href="item.html">
+                        <img class="p1" src="products/product1.jpg" alt="">
+                        <div class="des">
+                            <span>American Eagle</span>
+                            <h5>AE SUPER SOFT ICON V-NECK</h5>
+                            <div class="star">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                            </div>
+                            <h4>EGP 300.00</h4>
+                        </div>
+                        <a href="#"><i class="material-icons cart">shop</i></a>
+                    </a>
+                </div>
+                <div class="pro-container">
+                    <div onclick="" class="pro">
+                        <a href="item.html">
+                            <img class="p1" src="products/product1.jpg" alt="">
+                            <div class="des">
+                                <span>American Eagle</span>
+                                <h5>AE SUPER SOFT ICON V-NECK</h5>
+                                <div class="star">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                </div>
+                                <h4>EGP 300.00</h4>
+                            </div>
+                            <a href="#"><i class="material-icons cart">shop</i></a>
+                        </a>
+                    </div>
+                    
     </section>
     <section class="foot">
         <footer class="site-footer">
