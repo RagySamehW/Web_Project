@@ -32,6 +32,21 @@ td
     margin: 5px;
     background-color: #fd8c66;
 }
+.table3
+{
+    width: 50%;
+    margin: 5px;
+}
+.header
+{
+    text-align: left;
+    padding: 10px;
+}
+.price
+{
+    text-align: right;
+    padding: 10px;
+}
 
 
 
