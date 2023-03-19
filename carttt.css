@@ -1,8 +1,10 @@
 table{
         border-collapse: collapse;
-        width: 100%;
+        width: 95%;
         table-layout: fixed;
         border: 2px solid black;
+        margin-left: auto;
+        margin-right: auto;
 }
 th{
     font-weight: 700;
@@ -22,20 +24,40 @@ td
 }
 .table2
 {
-    width: 50%;
+   width: 40%;
+    margin-left: 37px;
+    float: left
+}
+.code
+{
+    text-align: center;
+    padding: 15px;
     margin: 5px;
+    background-color: white;
+}
+.code:hover
+{
+    background-color:black;
+    color: white;
+}
 }
 .buttonss
 {
     text-align: center;
     padding: 15px;
     margin: 5px;
-    background-color: #fd8c66;
+    background-color: white;
+}
+.buttonss:hover {
+    background-color:#fd8c66;
+    color: white;
 }
 .table3
 {
     width: 50%;
-    margin: 5px;
+    float: right;
+    margin-right: 37px;
+    margin-bottom: 10px;
 }
 .header
 {
@@ -46,6 +68,15 @@ td
 {
     text-align: right;
     padding: 10px;
+}
+tr:hover
+{
+    background-color:darkgrey;
+}
+.trash
+{
+    width: 40;
+    height: 25px; 
 }
 
 
