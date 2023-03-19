@@ -11,6 +11,24 @@
                 return true;
             }
         }
+            function validatePassword(field1, field2){
+            let valid=true;
+            if(field1==''){
+                document.getElementById('pwErr').innerHTML='You Must Enter a Password.';
+                valid=false;
+            }
+            else{
+                document.getElementById('pwErr').innerHTML='';
+            }
+            if(field1!=field2 || field2==''){
+                document.getElementById('pwcErr').innerHTML='You must Enter a matching Password.';
+                valid=false;
+            }
+            else{
+                document.getElementById('pwcErr').innerHTML='';
+            }
+            return valid;
+        }
         </script>
     </head>
     
