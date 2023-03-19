@@ -1,6 +1,26 @@
 <html>
     <head><link rel="stylesheet" href="signup.css">
-        <script defer src="SignUp.js"></script>
     </head>
-
+<body>
+    <div class="Registeration">
+        <h1>SignUp</h1> 
+    <form action="" method="post" onsubmit="return validate(this)">
+        <input type="text" name="UserName" placeholder="UserName">
+        <div id="nameErr" class="err"></div>
+        <input type="password" name="Password" placeholder="Password">
+        <div id="pwErr" class="err"></div>
+        <input type="password" name="ConfirmPassword" placeholder="ConfirmPassword">
+        <div id="pwcErr" class="err"></div>
+        <input type="date" name="dob" placeholder="DateOfBirth">
+        <div id="dobErr" class="err"></div>
+        <input type="submit" name="submit">
+        <P>By clicking the SignUp button ,you agree to our<br>
+            <a href="#">Terms and Condition</a>and<a href="#">Policy and Privacy</a>
+        </P>
+        <p>Already have an account?
+            <a href="Login.html">Login here</a>
+        </p>
+    </form>
+</div>
+ </body>
     
