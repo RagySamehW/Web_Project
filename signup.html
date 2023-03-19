@@ -29,6 +29,30 @@
             }
             return valid;
         }
+             function validateDOB(field){
+            let dob = new Date(field);  
+            let diff_ms = Date.now() - dob.getTime();
+            let age_dt = new Date(diff_ms); 
+            if( Math.abs(age_dt.getUTCFullYear() - 1970)>=18){
+                document.getElementById('dobErr').innerHTML='';
+                return true;
+            }
+            else{					
+                document.getElementById('dobErr').innerHTML='You Must be older than 18 years.';
+                return false;
+            }
+        }
+        function validate(form){
+            let fail='';
+            fail&=validateUserName(form.UserName.value);
+            fail&=validatePassword(form.Password.value, form.ConfirmPassword.value);
+            fail&=validateDOB(form.dob.value);
+            if(fail)
+                return true;
+            else{
+                return false;
+            }
+        }
         </script>
     </head>
     
