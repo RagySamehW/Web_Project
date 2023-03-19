@@ -1,6 +1,19 @@
 <html>
     <head><link rel="stylesheet" href="signup.css">
+        <script>
+        function validateUserName(field){
+            if(field==''){
+                document.getElementById('nameErr').innerHTML='You Must Enter a UserName.';
+                return false;
+            }
+            else{
+                document.getElementById('nameErr').innerHTML='';
+                return true;
+            }
+        }
+        </script>
     </head>
+    
 <body>
     <div class="Registeration">
         <h1>SignUp</h1> 
