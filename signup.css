@@ -1,0 +1,36 @@
+.Registeration{
+    width: 360px;
+    height: 570px;
+    margin: auto;
+    background-color: #eb9e10;
+    border-radius: 3px;
+    
+}
+h1{
+    text-align: center;
+    padding: 1px;
+}
+form{
+    width: 300px;
+    margin-left: 10px;
+}
+form label{
+    display: flex;
+    margin-top: 10px;
+    font-size: 18px;
+}
+form input
+{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border:1px solid #eb9e10;
+    border-radius: 6px;
+    outline: none;
+    
+}
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
