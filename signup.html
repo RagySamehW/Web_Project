@@ -1,95 +1,86 @@
 <html>
-    <head><link rel="stylesheet" href="signup.css">
-        <script>
-        function validateUserName(field){
-            if(field==''){
-                document.getElementById('nameErr').innerHTML='You Must Enter a UserName.';
+
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <script>
+        function validateUserName(field) {
+            if (field == '') {
+                document.getElementById('nameErr').innerHTML = 'You Must Enter a UserName.';
                 return false;
             }
-            else{
-                document.getElementById('nameErr').innerHTML='';
+            else {
+                document.getElementById('nameErr').innerHTML = '';
                 return true;
             }
         }
-            function validatePassword(field1, field2){
-            let valid=true;
-            if(field1==''){
-                document.getElementById('pwErr').innerHTML='You Must Enter a Password.';
-                valid=false;
+        function validatePassword(field1, field2) {
+            let valid = true;
+            if (field1 == '') {
+                document.getElementById('pwErr').innerHTML = 'You Must Enter a Password.';
+                valid = false;
             }
-            else{
-                document.getElementById('pwErr').innerHTML='';
+            else {
+                document.getElementById('pwErr').innerHTML = '';
             }
-            if(field1!=field2 || field2==''){
-                document.getElementById('pwcErr').innerHTML='You must Enter a matching Password.';
-                valid=false;
+            if (field1 != field2 || field2 == '') {
+                document.getElementById('pwcErr').innerHTML = 'You must Enter a matching Password.';
+                valid = false;
             }
-            else{
-                document.getElementById('pwcErr').innerHTML='';
+            else {
+                document.getElementById('pwcErr').innerHTML = '';
             }
             return valid;
         }
-             function validateDOB(field){
-            let dob = new Date(field);  
+        function validateDOB(field) {
+            let dob = new Date(field);
             let diff_ms = Date.now() - dob.getTime();
-            let age_dt = new Date(diff_ms); 
-            if( Math.abs(age_dt.getUTCFullYear() - 1970)>=18){
-                document.getElementById('dobErr').innerHTML='';
+            let age_dt = new Date(diff_ms);
+            if (Math.abs(age_dt.getUTCFullYear() - 1970) >= 18) {
+                document.getElementById('dobErr').innerHTML = '';
                 return true;
             }
-            else{					
-                document.getElementById('dobErr').innerHTML='You Must be older than 18 years.';
+            else {
+                document.getElementById('dobErr').innerHTML = 'You Must be older than 18 years.';
                 return false;
             }
         }
-        function validate(form){
-            let fail='';
-            fail&=validateUserName(form.UserName.value);
-            fail&=validatePassword(form.Password.value, form.ConfirmPassword.value);
-            fail&=validateDOB(form.dob.value);
-            if(fail)
+        function validate(form) {
+            let fail = '';
+            fail &= validateUserName(form.UserName.value);
+            fail &= validatePassword(form.Password.value, form.ConfirmPassword.value);
+            fail &= validateDOB(form.dob.value);
+            if (fail)
                 return true;
-            else{
+            else {
                 return false;
             }
         }
-        </script>
-    </head>
-    
-<body>
-     <section id="header">
-        <a class="logo" href="#">LionSoul</a>
+    </script>
+</head>
 
-        <div>
-            <ul id="navbar">
-                <li><a href="pro.html">Home</a></li>
-                <li><a class="shop" href=" shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><i class="material-icons">shop</i></a></li>
-            </ul>
-        </div>
-    </section>
+<body>
     <div class="Registeration">
-        <h1>SignUp</h1> 
-    <form action="" method="post" onsubmit="return validate(this)">
-        <input type="text" name="UserName" placeholder="UserName">
-        <div id="nameErr" class="err"></div>
-        <input type="password" name="Password" placeholder="Password">
-        <div id="pwErr" class="err"></div>
-        <input type="password" name="ConfirmPassword" placeholder="ConfirmPassword">
-        <div id="pwcErr" class="err"></div>
-        <input type="date" name="dob" placeholder="DateOfBirth">
-        <div id="dobErr" class="err"></div>
-        <input type="submit" name="submit">
-        <P>By clicking the SignUp button ,you agree to our<br>
-            <a href="#">Terms and Condition</a>and<a href="#">Policy and Privacy</a>
-        </P>
-        <p>Already have an account?
-            <a href="Login.html">Login here</a>
-        </p>
-    </form>
-</div>
- </body>
-    
+        <h1>SignUp</h1>
+        <form action="" method="post" onsubmit="return validate(this)">
+            <input type="text" name="UserName" placeholder="UserName">
+            <div id="nameErr" class="err"></div>
+
+            <input type="password" name="Password" placeholder="Password">
+            <div id="pwErr" class="err"> </div>
+
+            <input type="password" name="ConfirmPassword" placeholder="ConfirmPassword">
+            <div id="pwcErr" class="err"></div>
+
+            <input type="date" name="dob" placeholder="DateOfBirth">
+            <div id="dobErr" class="err"></div>
+
+            <input type="submit" name="submit">
+            <P>By clicking the SignUp button ,you agree to our<br>
+                <a href="#">Terms and Condition</a>and<a href="#">Policy and Privacy</a>
+            </P>
+            <p>Already have an account?
+                <a href="Login.html">Login here</a>
+            </p>
+        </form>
+    </div>
+</body>
