@@ -16,24 +16,67 @@ input[type=text], textarea {
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    box-sizing: border-box;
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize:none; 
   }
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color:goldenrod;
     color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
   }
   input[type=submit]:hover {
-    background-color: #45a049;
+      background-color: gold;
   }
   .container {
     border-radius: 5px;
-    background-color: blueviolet;
+    background-color: black;
     padding: 20px;
     width: 30%;
+    float: right;
+    margin-right: 60px;
   }
+/* faq*/
+    .layout {
+    width: 600px;
+    margin-left: 60px;
+    float: left;
+    }
+    .faq {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    }
+.question p {
+    margin: 5px;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 20px;
+    text-align: center;
+    }
+    .answer p {
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    background: goldenrod;
+    border-radius: 10px;
+    text-align: center;
+    }
+    .faq:hover {
+    cursor: pointer;
+    }
+    .answer {
+    display: none;
+    }
+    .faq.active .answer {
+    display: block;
+    }
+    
