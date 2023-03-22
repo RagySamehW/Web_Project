@@ -53,3 +53,30 @@ input[type=text], textarea {
     border-radius: 10px;
     color: white;
     }
+.question p {
+    margin: 5px;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 20px;
+    text-align: center;
+    }
+    .answer p {
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    background: goldenrod;
+    border-radius: 10px;
+    text-align: center;
+    }
+    .faq:hover {
+    cursor: pointer;
+    }
+    .answer {
+    display: none;
+    }
+    .faq.active .answer {
+    display: block;
+    }
+    
