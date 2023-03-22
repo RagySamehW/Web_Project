@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/42a3832eaa.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Spartan", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
+
+        h2 {
+            padding: 10px;
+            margin: 30px;
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
+
+        h4 {
+            font-size: 20px;
+            color: #222;
+        }
+
+        h6 {
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #465b52;
+            margin: 15px 0 20px 0;
+        }
+
+        .section-p1 {
+            padding: 40px 80px;
+        }
+
+        .section-m1 {
+            margin: 40px 0;
+        }
+
+        button.normal {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        button.white {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 11px 18px;
+            color: #252424;
+            background-color: transparent;
+            cursor: pointer;
+            border: 1px solid #000;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        body {
+            width: 100%;
+            background-color: #fafafa;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background-color: #000000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navbar li {
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fffcfc;
+            transition: 0.3s ease;
+        }
+
+        #navbar li a.home {
+            color: #eb9e10;
+        }
+
+        #navbar li a:hover,
+        #navbar li a.active {
+            color: #eb9e10;
+        }
+
+        #navbar li a.active::after,
+        #navbar li a:hover::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background-color: #eb9e10;
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }
+
+        #hero {
+            background-image: url("banners/woman-1245817.jpg");
+            height: 90vh;
+            width: 100%;
+            background-size: cover;
+            background-position: top 25% right 0;
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        #hero h4 {
+            padding-bottom: 15px;
+
+        }
+
+        #hero h1 {
+            color: #ffffff;
+        }
+
+        #hero button {
+            background-image: url("");
+            background-color: transparent;
+            color: #088178;
+            border: 0;
+            padding: 14px 80px 14px 65px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            font-weight: 700px;
+            font-size: 15px;
+        }
+
+        #feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        #feature .fe-box {
+            width: 220px;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+            border: 1px solid #cce7d0;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        #feature .fe-box:hover {
+            box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+        }
+
+        #feature .fe-box img {
+            width: 60%;
+            margin-bottom: 10px;
+        }
+
+        #feature .fe-box h6 {
+            display: inline-block;
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            color: #088178;
+            background-color: #eb9e10;
+        }
+
+        #feature .fe-box:nth-child(2) h6 {
+            background-color: #323233;
+        }
+
+        #feature .fe-box:nth-child(3) h6 {
+            background-color: #eb9e10;
+        }
+
+        #feature .fe-box:nth-child(4) h6 {
+            background-color: #92143e;
+        }
+
+        #product1 {
+            text-align: center;
+        }
+
+        #product1 .pro {
+            width: 23%;
+            min-width: 250px;
+            padding: 10px 12px;
+            border: 1px solid #eb9e10;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 5px 5px 10px #eb9e10;
+            margin: 15px 0;
+            transition: 0.2s ease;
+            position: relative;
+            background-color: #000;
+        }
+
+        #product1 .pro:hover {
+            box-shadow: 20px 20px 30px #eb9e10;
+        }
+
+        #product1 .pro img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        #product1 .pro .des {
+            text-align: start;
+            padding: 10px 0;
+        }
+
+        #product1 .pro .des span {
+            color: #635d5d;
+            font-size: 12px;
+        }
+
+        #product1 .pro .des h5 {
+            padding-top: 7px;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        #product1 .pro .des i {
+            font-size: 12px;
+            color: #eb9e10;
+        }
+
+        #product1 .pro .des h4 {
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fcfcfc;
+        }
+
+        #product1 .pro .cart {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            font-weight: 500;
+            background-color: #000000;
+            color: #eb9e10;
+            border: 1px solid #eb9e10;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+
+        #product1 .pro-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+
+        #banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("banners/banner2.jpg");
+            background-size: 100%;
+            width: 100%;
+            height: 40vh;
+            background-position: center;
+        }
+
+        #banner h4 {
+            color: #e8f6ea;
+            font-size: 18px;
+        }
+
+        #banner h2 {
+            color: #E3E6f3;
+            font-size: 30px;
+            ;
+        }
+
+        #banner h2 span {
+            color: #eb9e10;
+        }
+
+        #banner button:hover {
+            background-color: #eb9e10;
+        }
+
+        #sm-banner .banner-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-image: url("banners/pp222.jpg");
+            background-size: 100%;
+            min-width: 580px;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+
+        }
+
+        #sm-banner .banner-box2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-image: url("banners/new.jpg");
+            background-size: 100%;
+            min-width: 580px;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+        }
+
+        #sm-banner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+        }
+
+        #sm-banner h4 {
+            color: #4e4e4e;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        #sm-banner h2 {
+            color: #000;
+            font-size: 28px;
+            font-weight: 800;
+
+        }
+
+        #sm-banner span {
+            color: #4e4e4e;
+            font-size: 14px;
+            font-weight: 500;
+            padding-bottom: 15px;
+        }
+
+        #sm-banner .banner-box:hover button {
+            background-color: #eb9e10;
+            border: 1px solid #cce7d0;
+        }
+
+
+
+        .site-footer {
+            background-color: #26272b;
+            padding: 45px 0 20px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #737373;
+        }
+
+        .site-footer hr {
+            border-top-color: #bbb;
+            opacity: 0.5
+        }
+
+        .site-footer hr.small {
+            margin: 20px 0
+        }
+
+        .site-footer h6 {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 2px
+        }
+
+        .site-footer a {
+            color: #737373;
+        }
+
+        .site-footer a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            padding-left: 0;
+            list-style: none
+        }
+
+        .footer-links li {
+            display: block
+        }
+
+        .footer-links a {
+            color: #737373
+        }
+
+        .footer-links a:active,
+        .footer-links a:focus,
+        .footer-links a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .footer-links.inline li {
+            display: inline-block
+        }
+
+        .site-footer .social-icons {
+            text-align: right
+        }
+
+        .site-footer .social-icons a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 6px;
+            margin-right: 0;
+            border-radius: 100%;
+            background-color: #33353d
+        }
+
+        .copyright-text {
+            margin: 0
+        }
+
+        @media (max-width:991px) {
+            .site-footer [class^=col-] {
+                margin-bottom: 30px
+            }
+        }
+
+        @media (max-width:767px) {
+            .site-footer {
+                padding-bottom: 0
+            }
+
+            .site-footer .copyright-text,
+            .site-footer .social-icons {
+                text-align: center
+            }
+        }
+
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 4px
+        }
+
+        .social-icons li.title {
+            margin-right: 15px;
+            text-transform: uppercase;
+            color: #96a2b2;
+            font-weight: 700;
+            font-size: 13px
+        }
+
+        .social-icons a {
+            background-color: #eceeef;
+            color: #818a91;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 44px;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-radius: 100%;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear
+        }
+
+        .social-icons a:active,
+        .social-icons a:focus,
+        .social-icons a:hover {
+            color: #fff;
+            background-color: #29aafe
+        }
+
+        .social-icons.size-sm a {
+            line-height: 34px;
+            height: 34px;
+            width: 34px;
+            font-size: 14px
+        }
+
+        .social-icons a.facebook:hover {
+            background-color: #3b5998
+        }
+
+        .social-icons a.twitter:hover {
+            background-color: #00aced
+        }
+
+        .social-icons a.linkedin:hover {
+            background-color: #007bb6
+        }
+
+        .social-icons a.dribbble:hover {
+            background-color: #ea4c89
+        }
+
+        @media (max-width:767px) {
+            .social-icons li.title {
+                display: block;
+                margin-right: 0;
+                font-weight: 600
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img class="logo" src="Logo.jpg" alt="logooo">"</a>
+        <div>
+            <ul id="navbar">
+                <li><a class="home" href="pro.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="material-icons">shop</i></a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
+        
+<body> <script>     //(((Mohanad's Code aho mn hena!)))    </script>
+    
+    <div class="container">
+
+        <h1>Wishing List</h1>
+    
+        <div class="wish">
+    
+            <div class="products">
+    
+                <div class="product">
+    
+                    <img src="products/product1-1.jpg">
+    
+                    <div class="product-info">
+    
+                        <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
+    
+                        <h4 class="product-price">EGP 300.00</h4>
+    
+    
+                        <p class="product-remove">
+    
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+    
+                            <span class="remove">Remove</span>
+    
+                        </p>
+    
+                    </div>
+    
+                </div>
+                <div class="product">
+    
+                    <img src="products/product2-2.jpg">
+    
+                    <div class="product-info">
+    
+                        <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
+    
+                        <h4 class="product-price">EGP 300.00</h4>
+    
+    
+                        <p class="product-remove">
+    
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+    
+                            <span class="remove">Remove</span>
+    
+                        </p>
+    
+                    </div>
+    
+                </div>
+                <div class="product">
+    
+                    <img src="products/product3-3.jpg">
+    
+                    <div class="product-info">
+    
+                        <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
+    
+                        <h4 class="product-price">EGP 300.00</h4>
+    
+    
+                        <p class="product-remove">
+    
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+    
+                            <span class="remove">Remove</span>
+    
+                        </p>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="product">
+    
+                    <img src="products/product4-4.jpg">
+    
+                    <div class="product-info">
+    
+                        <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
+    
+                        <h4 class="product-price">EGP 300.00</h4>
+        
+    
+                        <p class="product-remove">
+    
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+    
+                            <span class="remove">Remove</span>
+    
+                        </p>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="Price-total">
+    
+                <p>
+    
+                    <span>Total Price</span>
+    
+                    <span>EGP 1200.00</span>
+    
+                </p>
+    
+                <p>
+    
+                    <span>Number of Items</span>
+    
+                    <span>4</span>
+    
+                </p>
+    
+                <p>
+    
+
+                </p>
+    
+                <a href="#">Add to Cart</a>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+
+	font-family: 'Comfortaa', cursive;
+
+	margin: 0;
+
+	padding: 0;
+
+	box-sizing: border-box;
+
+}
+
+.container{
+
+	max-width: 1200px;
+
+	margin: 0 auto;
+
+}
+
+.container > h1{
+
+	padding: 20px 0;
+
+}
+
+.cart{
+
+	display: flex;
+
+}
+
+.products{
+
+	flex: 0.75;
+
+}
+
+.product{
+
+	display: flex;
+
+	width: 100%;
+
+	height: 200px;
+
+	overflow: hidden;
+
+	border: 1px solid silver;
+
+	margin-bottom: 20px;
+
+}
+
+.product:hover{
+
+	border: none;
+
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
+	transform: scale(1.01);
+
+}
+
+.product > img{
+
+	width: 300px;
+
+	height: 200px;
+
+	object-fit: cover;
+
+}
+
+.product > img:hover{
+
+	transform: scale(1.04);
+
+}
+
+.product-info{
+
+	padding: 20px;
+
+	width: 100%;
+
+	position: relative;
+
+}
+
+.product-name, .product-price, .product-offer{
+
+	margin-bottom: 20px;
+
+}
+
+.product-remove{
+
+	position: absolute;
+
+	bottom: 20px;
+
+	right: 20px;
+
+	padding: 10px 25px;
+
+	background-color: green;
+
+	color: white;
+
+	cursor: pointer;
+
+	border-radius: 5px;
+
+}
+
+.product-remove:hover{
+
+	background-color: white;
+
+	color: green;
+
+	font-weight: 600;
+
+	border: 1px solid green;
+
+}
+
+.product-quantity > input{
+
+	width: 40px;
+
+	padding: 5px;
+
+	text-align: center;
+
+}
+
+.fa{
+
+	margin-right: 5px;
+
+}
+
+.cart-total{
+
+	flex: 0.25;
+
+	margin-left: 20px;
+
+	padding: 20px;
+
+	height: 240px;
+
+	border: 1px solid silver;
+
+	border-radius: 5px;
+
+}
+
+.cart-total p{
+
+	display: flex;
+
+	justify-content: space-between;
+
+	margin-bottom: 30px;
+
+	font-size: 20px;
+
+}
+
+.cart-total a{
+
+	display: block;
+
+	text-align: center;
+
+	height: 40px;
+
+	line-height: 40px;
+
+	background-color: tomato;
+
+	color: white;
+
+	text-decoration: none;
+
+}
+
+.cart-total a:hover{
+
+	background-color: red;
+
+}
+
+@media screen and (max-width: 700px){
+
+	.remove{
+
+		display: none;
+
+	}
+
+	.product{
+
+		height: 150px;
+
+	}
+
+	.product > img{
+
+		height: 150px;
+
+		width: 200px;
+
+	}
+
+	.product-name, .product-price, .product-offer{
+
+		margin-bottom: 10px;
+
+	}
+
+}
+
+@media screen and (max-width: 900px){
+
+	.cart{
+
+		flex-direction: column;
+
+	}
+
+	.cart-total{
+
+		margin-left: 0;
+
+		margin-bottom: 20px;
+
+	}
+
+}
+
+@media screen and (max-width: 1220px){
+
+	.container{
+
+		max-width: 95%;
+
+	}
+
+}
+</style>
+</body>
+</html>
