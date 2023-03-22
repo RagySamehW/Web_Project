@@ -16,24 +16,26 @@ input[type=text], textarea {
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    box-sizing: border-box;
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize:none; 
   }
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color:goldenrod;
     color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
   }
   input[type=submit]:hover {
-    background-color: #45a049;
+      background-color: gold;
   }
   .container {
     border-radius: 5px;
-    background-color: blueviolet;
+    background-color: black;
     padding: 20px;
     width: 30%;
+    float: right;
+    margin-right: 60px;
   }
