@@ -7,6 +7,15 @@
 
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/NavBar.css">
+    <script src="https://kit.fontawesome.com/3929e16ef5.js" crossorigin="anonymous"></script>
+    <script src="{% static 'network/functions.js' %}"></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <title>Products</title>
     <style>
         * {
@@ -56,70 +65,8 @@
             width: 100%;
             background-color: #00000000
         }
-
-        #header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 80px;
-            background-color: #000000;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-            z-index: 999;
-            position: sticky;
-            top: 0;
-            left: 0;
-
-        }
-
-        #header .logo {
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            color: #fffcfc;
-            font-family: Serif;
-        }
-        
-
-        #navbar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #navbar li {
-            list-style: none;
-            padding: 0 20px;
-            position: relative;
-
-        }
-
-        #navbar li a {
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            color: #fffcfc;
-            transition: 0.3s ease;
-        }
-
         #navbar li a.shop {
             color: #eb9e10;
-        }
-
-        #navbar li a:hover,
-        #navbar li a.active {
-            color: #eb9e10;
-            text-decoration: none;
-        }
-
-        #navbar li a.active::after,
-        #navbar li a:hover::after {
-            content: "";
-            width: 30%;
-            height: 2px;
-            background-color: #eb9e10;
-            position: absolute;
-            bottom: -4px;
-            left: 20px;
         }
 
         #product1 {
@@ -197,28 +144,44 @@
             flex-wrap: wrap;
             padding-top: 20px;
         }
+
+        #num button {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 10px;
+            border: #000, 10px;
+            border-radius: 20px;
+            background-color: #eb9e10;
+            color: #000;
+        }
+        #num button:hover{
+            background-color: #c58308;
+        }
+        #num a{
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
     <section id="header">
-        <a class="logo" href="#">LionSoul</a>
+        <a class="logo" href="pro.html">LionSoul</a>
 
         <div>
             <ul id="navbar">
                 <li><a href="pro.html">Home</a></li>
-                <li><a class="shop" href=" shop.html">Shop</a></li>
+                <li><a class="shop" href="products.html">Shop</a></li>
                 <li><a href="test.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#"><i id="heart" class="far fa-heart"></i></a></li>
                 <li><a href="cart.html"><i class="material-icons">shop</i></a></li>
             </ul>
         </div>
     </section>
     <section id="product1" class="section-p1">
-        <hr>
-        <h2>Featured Products</h2>
-        <p>Best Summer Collection of all time</p>
+        <h2>New Arrivals</h2>
+        <p>The Store you always wanted!!</p>
         <div class="pro-container">
             <div onclick="" class="pro">
                 <a href="item.html">
@@ -724,10 +687,77 @@
                     <a href="#"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
-
-
-
         </div>
+    </section>
+    <section id="num">
+        <div>
+            <a href="products.html">
+                <center>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                </center>
+            </a>
+        </div>
+
+    </section>
+    <section id="f">
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help
+                            the upcoming programmers with the code. Scanfcode focuses on providing the most efficient
+                            code or snippets as the code wants to be simple. We will help programmers build up concepts
+                            in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap,
+                            JavaScript, PHP, Android, SQL and Algorithm.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                            <a href="#">Scanfcode</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </section>
 </body>
 

@@ -7,16 +7,11 @@
 
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/NavBar.css">
+
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Spartan", sans-serif;
-        }
-
         html {
             scroll-behavior: smooth;
         }
@@ -47,6 +42,10 @@
             font-size: 16px;
             color: #465b52;
             margin: 15px 0 20px 0;
+        }
+
+        #navbar li a.home {
+            color: #eb9e10;
         }
 
         .section-p1 {
@@ -85,61 +84,6 @@
         body {
             width: 100%;
             background-color: #fafafa;
-        }
-
-        #header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 80px;
-            background-color: #000000;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-            z-index: 999;
-            position: sticky;
-            top: 0;
-            left: 0;
-
-        }
-
-        #navbar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #navbar li {
-            list-style: none;
-            padding: 0 20px;
-            position: relative;
-
-        }
-
-        #navbar li a {
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            color: #fffcfc;
-            transition: 0.3s ease;
-        }
-
-        #navbar li a.home {
-            color: #eb9e10;
-        }
-
-        #navbar li a:hover,
-        #navbar li a.active {
-            color: #eb9e10;
-        }
-
-        #navbar li a.active::after,
-        #navbar li a:hover::after {
-            content: "";
-            width: 30%;
-            height: 2px;
-            background-color: #eb9e10;
-            position: absolute;
-            bottom: -4px;
-            left: 20px;
         }
 
         #hero {
@@ -392,193 +336,24 @@
             border: 1px solid #cce7d0;
         }
 
-
-
-        .site-footer {
-            background-color: #26272b;
-            padding: 45px 0 20px;
-            font-size: 15px;
-            line-height: 24px;
-            color: #737373;
-        }
-
-        .site-footer hr {
-            border-top-color: #bbb;
-            opacity: 0.5
-        }
-
-        .site-footer hr.small {
-            margin: 20px 0
-        }
-
-        .site-footer h6 {
-            color: #fff;
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-top: 5px;
-            letter-spacing: 2px
-        }
-
-        .site-footer a {
-            color: #737373;
-        }
-
-        .site-footer a:hover {
-            color: #3366cc;
-            text-decoration: none;
-        }
-
-        .footer-links {
-            padding-left: 0;
-            list-style: none
-        }
-
-        .footer-links li {
-            display: block
-        }
-
-        .footer-links a {
-            color: #737373
-        }
-
-        .footer-links a:active,
-        .footer-links a:focus,
-        .footer-links a:hover {
-            color: #3366cc;
-            text-decoration: none;
-        }
-
-        .footer-links.inline li {
-            display: inline-block
-        }
-
-        .site-footer .social-icons {
-            text-align: right
-        }
-
-        .site-footer .social-icons a {
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            margin-left: 6px;
-            margin-right: 0;
-            border-radius: 100%;
-            background-color: #33353d
-        }
-
-        .copyright-text {
-            margin: 0
-        }
-
-        @media (max-width:991px) {
-            .site-footer [class^=col-] {
-                margin-bottom: 30px
-            }
-        }
-
-        @media (max-width:767px) {
-            .site-footer {
-                padding-bottom: 0
-            }
-
-            .site-footer .copyright-text,
-            .site-footer .social-icons {
-                text-align: center
-            }
-        }
-
-        .social-icons {
-            padding-left: 0;
-            margin-bottom: 0;
-            list-style: none
-        }
-
-        .social-icons li {
-            display: inline-block;
-            margin-bottom: 4px
-        }
-
-        .social-icons li.title {
-            margin-right: 15px;
-            text-transform: uppercase;
-            color: #96a2b2;
-            font-weight: 700;
-            font-size: 13px
-        }
-
-        .social-icons a {
-            background-color: #eceeef;
-            color: #818a91;
-            font-size: 16px;
-            display: inline-block;
-            line-height: 44px;
-            width: 44px;
-            height: 44px;
-            text-align: center;
-            margin-right: 8px;
-            border-radius: 100%;
-            -webkit-transition: all .2s linear;
-            -o-transition: all .2s linear;
-            transition: all .2s linear
-        }
-
-        .social-icons a:active,
-        .social-icons a:focus,
-        .social-icons a:hover {
-            color: #fff;
-            background-color: #29aafe
-        }
-
-        .social-icons.size-sm a {
-            line-height: 34px;
-            height: 34px;
-            width: 34px;
-            font-size: 14px
-        }
-
-        .social-icons a.facebook:hover {
-            background-color: #3b5998
-        }
-
-        .social-icons a.twitter:hover {
-            background-color: #00aced
-        }
-
-        .social-icons a.linkedin:hover {
-            background-color: #007bb6
-        }
-
-        .social-icons a.dribbble:hover {
-            background-color: #ea4c89
-        }
-
-        @media (max-width:767px) {
-            .social-icons li.title {
-                display: block;
-                margin-right: 0;
-                font-weight: 600
-            }
-        }
-        #header .logo {
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            color: #fffcfc;
-            font-family: Serif;
-        }
-        #sm-banner{
+        #sm-banner {
             padding: 20px;
             margin-top: 30px;
             margin-bottom: 110px;
         }
-        
+
     </style>
+    <script src="https://kit.fontawesome.com/3929e16ef5.js" crossorigin="anonymous"></script>
+    <script src="{% static 'network/functions.js' %}"></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
     <section id="header">
-        <a class="logo" href="#">LionSoul</a>
+        <a class="logo" href="pro.html">LionSoul</a>
 
         <div>
             <ul id="navbar">
@@ -587,6 +362,7 @@
                 <li><a href="test.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="wishhlist.html"><i id="heart" class="far fa-heart"></i></a></li>
                 <li><a href="cart.html"><i class="material-icons">shop</i></a></li>
             </ul>
         </div>
@@ -771,146 +547,146 @@
         <div class="pro-container">
             <div class="pro">
                 <a href="item.html">
-                <img class="p1" src="products/pp1.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img class="p1" src="products/pp1.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
             <div class="pro">
                 <a href="item.html">
-                <img src="products/pp2.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img src="products/pp2.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
             <div class="pro">
                 <a href="item.html">
-                <img src="products/pp3.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img src="products/pp3.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
             <div class="pro">
                 <a href="item.html">
-                <img src="products/pp4.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img src="products/pp4.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
             <div class="pro">
                 <a href="item.html">
-                <img src="products/pp5.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img src="products/pp5.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
             <div class="pro">
                 <a href="item.html">
-                <img src="products/pp6.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img src="products/pp6.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
             <div class="pro">
                 <a href="item.html">
-                <img src="products/pp7.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img src="products/pp7.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
             <div class="pro">
                 <a href="item.html">
-                <img src="products/pp8.webp" alt="">
-                <div class="des">
-                    <span>American Eagle</span>
-                    <h5>AE SUPER SOFT ICON V-NECK</h5>
-                    <div class="star">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
+                    <img src="products/pp8.webp" alt="">
+                    <div class="des">
+                        <span>American Eagle</span>
+                        <h5>AE SUPER SOFT ICON V-NECK</h5>
+                        <div class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                        <h4>EGP 300.00</h4>
                     </div>
-                    <h4>EGP 300.00</h4>
-                </div>
-                <a href="cart.html"><i class="material-icons cart">shop</i></a>
+                    <a href="cart.html"><i class="material-icons cart">shop</i></a>
                 </a>
             </div>
         </div>
