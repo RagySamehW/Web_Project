@@ -39,3 +39,17 @@ input[type=text], textarea {
     float: right;
     margin-right: 60px;
   }
+/* faq*/
+    .layout {
+    width: 600px;
+    margin-left: 60px;
+    float: left;
+    }
+    .faq {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    }
