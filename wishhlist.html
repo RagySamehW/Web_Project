@@ -29,6 +29,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        #navbar li a.heart1 {
+            color: #eb9e10;
+        }
 
         .container {
             max-width: 1200px;
@@ -52,7 +55,9 @@
             width: 100%;
             height: 200px;
             overflow: hidden;
-            border: 1px solid silver;
+            color: blanchedalmond;
+            background-color: black;
+        
             margin-bottom: 20px;
         }
 
@@ -95,8 +100,24 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        .product-add {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            padding: 10px 28px;
+            background-color: #eb9e10;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
         .product-remove:hover {
+            background-color: white;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            border: 1px solid #eb9e10;
+        }
+        .product-add:hover {
             background-color: white;
             color: rgb(0, 0, 0);
             font-weight: 600;
@@ -153,18 +174,24 @@
             }
         }
     </style>
+    <script src="https://kit.fontawesome.com/3929e16ef5.js" crossorigin="anonymous"></script>
+    <script src="{% static 'network/functions.js' %}"></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <section id="header">
-        <a href="#"><img class="logo" src="Logo.jpg" alt="logooo">"</a>
+        <a class="logo" href="pro.html">LionSoul</a>
         <div>
             <ul id="navbar">
-                <li><a class="home" href="pro.html">Home</a></li>
+                <li><a href="pro.html">Home</a></li>
                 <li><a href="products.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a class="heart1" href="wishhlist.html"><i id="heart" class="far fa-heart"></i></a></li>
                 <li><a href="cart.html"><i class="material-icons">shop</i></a></li>
             </ul>
         </div>
@@ -180,6 +207,7 @@
                         <div class="product-info">
                             <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
                             <h4 class="product-price">EGP 300.00</h4>
+                            <p class="product-add"><span class="add">Add to cart</span></p>
                             <p class="product-remove">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 <span class="remove">Remove</span>
@@ -191,6 +219,7 @@
                         <div class="product-info">
                             <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
                             <h4 class="product-price">EGP 300.00</h4>
+                            <p class="product-add"><span class="add">Add to cart</span></p>
                             <p class="product-remove">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 <span class="remove">Remove</span>
@@ -202,6 +231,7 @@
                         <div class="product-info">
                             <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
                             <h4 class="product-price">EGP 300.00</h4>
+                            <p class="product-add"><span class="add">Add to cart</span></p>
                             <p class="product-remove">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 <span class="remove">Remove</span>
@@ -213,6 +243,7 @@
                         <div class="product-info">
                             <h3 class="product-name">AE SUPER SOFT ICON V-NECK</h3>
                             <h4 class="product-price">EGP 300.00</h4>
+                            <p class="product-add"><span class="add">Add to cart</span></p>
                             <p class="product-remove">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 <span class="remove">Remove</span>
