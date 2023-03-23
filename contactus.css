@@ -8,6 +8,7 @@ body{
     background: url(images\ \(1\).jpg);
     background-size: auto;
     background-repeat: no-repeat;
+    background-color: dimgrey;
 }
 .content
 {
@@ -84,4 +85,10 @@ input[type=text], textarea {
     .faq.active .answer {
     display: block;
     }
-    
+     .imgg
+    {
+        width: 50%;
+        height: 205px;
+        margin-left: auto;
+        margin-right: auto;
+    }
