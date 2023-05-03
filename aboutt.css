@@ -73,7 +73,7 @@
  }
 
  .banner-card img {
-   width: 1350px;
+   width: 1550px;
    height: 250px;
  }
 
@@ -129,9 +129,9 @@
  }
 h2{
     position: absolute;
-    bottom: 250;
+    bottom: 350;
 right:150;
-left: 800;
+left: 870;
 font-weight: bold;
 font-size:xx-large;
 color: rgb(0, 0, 0) ;
